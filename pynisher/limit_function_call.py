@@ -1,6 +1,13 @@
 #! /bin/python
-import resource
-import signal
+try:
+    import resource
+except ImportError:
+    from winstub import resource
+import platform
+if platform.system()=='Windows':
+    from winstub import signalstub as signal
+else:
+    import signal
 import multiprocessing
 import os
 import sys
