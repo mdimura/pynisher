@@ -306,7 +306,7 @@ class enforce_limits(object):
                             self.logger.error(
                                 f"Cannot recover the output from {err_file} due to {e}")
 
-                        tmp_dir.cleanup()
+                        #tmp_dir.cleanup()
 
                     # don't leave zombies behind
                     subproc.join()
